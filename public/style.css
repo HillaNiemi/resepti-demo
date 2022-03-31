@@ -7,12 +7,9 @@
     box-shadow: 1cm;
 }
 :root{
-    background: rgb(3,3,8);
-    background: linear-gradient(90deg, rgba(3,3,8,1) 0%, rgba(11,115,136,1) 100%);
+    background-color: beige;
 }
 body{
-    font-weight: 300;
-    font-size: 1.05rem;
-    line-height: 1.6;
     font-family: 'Rubik' sans-serif;
+    margin: 0;
 }
