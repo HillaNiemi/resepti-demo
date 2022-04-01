@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseptihaku</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,9 +27,9 @@
             </div>
 
             <div class="meal-result">
-                <h2 class="title">Tulokset:</h2>
+                <h2 class="title">Hakusi tulokset:</h2>
                 <div id="meal">
-
+                    <!-- meal item -->
                     <div class="meal item">
                         <div class="meal-img">
                             <img src="food.jpg" alt="food">
@@ -40,10 +39,57 @@
                             <a href="#" class="recipe-btn">Tästä resepti</a>
                         </div>
                     </div>
-
+                    <!-- end of meal item -->
+                    <!-- meal item -->
+                    <div class="meal item">
+                        <div class="meal-img">
+                            <img src="food.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Ranskalaiset</h3>
+                            <a href="#" class="recipe-btn">Tästä resepti</a>
+                        </div>
+                    </div>
+                    <!-- end of meal item -->
+                    <!-- meal item -->
+                    <div class="meal item">
+                        <div class="meal-img">
+                            <img src="food.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Ranskalaiset</h3>
+                            <a href="#" class="recipe-btn">Tästä resepti</a>
+                        </div>
+                    </div>
+                    <!-- end of meal item-->                            
                 </div>
             </div>
 
+            <div class="meal details">
+            <!-- recipe close btn -->
+            <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                <i class="fas fa-times"></i>
+            </button> 
+
+            <!-- meal content -->
+            <div class="meal-details-content">
+                <h2 class="recipe-title">Meals name here</h2>
+                <p class="recipe-category">Luokka</p>
+                <div class="recipe-instruct">
+                    <h3>Ohjeet:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed, minima est earum dolorem assumenda possimus quidem ullam illo expedita!</p>
+                </div>
+                <div class="recipe-meal-img">
+                    <img src="food.jpg" alt="">
+                </div>
+                <div class="recipe-link">
+                    <a href="#"target = "_blank">Katso video</a>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
     <script src = "script.js"></script>
 </body>
