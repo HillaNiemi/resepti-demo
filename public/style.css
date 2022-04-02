@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,800;0,900;1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@100;200;300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -13,7 +17,7 @@ body{
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
-    font-family: 'Rubik' sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: #fff;
 }
 
@@ -28,8 +32,15 @@ body{
     opacity: 0.8;
 }
 .title{
+    font-family: 'Tourney', cursive;
+    font-weight: 100;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.sitaatti{
+    font-family: 'Lobster Two', cursive;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 /*  */
@@ -37,9 +48,9 @@ body{
     min-height: 100vh;
 }
 .meal-wrapper{
-    max-width: 1280px;
+    max-width: 2000px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem;
     background: linear-gradient(
         to right,
         #16222a,
@@ -67,7 +78,7 @@ body{
     font-size: 1.1rem;
     font-family: inherit;
     outline: 0;
-    border: 2px solid var(--tausta-musta);
+    border: 1px solid var(--tausta-musta);
     color: var(--tausta-musta);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
@@ -94,12 +105,22 @@ body{
     background: var(--tausta-mustempi);
 }
 .meal-result{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.8rem;
     margin-top: 4rem;
 }
 #meal{
     margin: 2.4rem 0;
 }
 .meal-item{
+    background-color: antiquewhite;
+    /* From https://css.glass */
+background: rgba(208, 229, 243, 0.18);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.6px);
+
+-webkit-backdrop-filter: blur(17.6px);
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -150,9 +171,17 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     color: #fff;
     background: var(--tausta-musta);
     border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
     width: 90%;
     height: 90%;
     overflow-y: scroll;
@@ -165,6 +194,10 @@ body{
 .meal-details::-webkit-scrollbar-thumb{
     background: #f0f0f0;
     border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
 /* js related */
@@ -182,13 +215,16 @@ body{
     position: absolute;
     right: 2rem;
     top: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background: #fff;
     border: none;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,13 +239,29 @@ body{
     font-weight: 600;
     color: var(--tausta-musta);
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tausta-musta);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
 }
 .recipe-instruct{
     padding: 1rem 0;
 }
-.recipe-meal.img img{
+.recipe-meal-img img{
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -228,8 +280,20 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
     transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 
+/* */
+.notFound{
+    grid-template-columns: 1fr!important;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    width: 100%;
+}
 
 /* Media queries */
 @media screen and (min-width: 600px){
