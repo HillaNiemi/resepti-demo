@@ -26,7 +26,7 @@ function getMealList(){
                         </div>
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Tästä resepti</a>
+                            <a href = "#" class = "recipe-btn">Go to Recipe</a>
                         </div>
                     </div>
                 `;
@@ -34,7 +34,7 @@ function getMealList(){
             });
             mealList.classList.remove('notFound');
         } else{
-            html = "Sorry, we didn't find any meal! (Kokeile hakea englanniksi)";
+            html = "Sorry, we didn't find any meal!";
             mealList.classList.add('notFound');
         }
 

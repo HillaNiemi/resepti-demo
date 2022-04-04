@@ -50,7 +50,7 @@ body{
 .meal-wrapper{
     max-width: 2000px;
     margin: 0 auto;
-    padding: 3rem;
+    padding: 2rem;
     background: linear-gradient(
         to right,
         #16222a,
@@ -130,7 +130,7 @@ backdrop-filter: blur(17.6px);
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
     margin: 2rem 0;
 }
-.meal.img img{
+.meal-img img{
     width: 100%;
     display: block;
 }
@@ -138,7 +138,9 @@ backdrop-filter: blur(17.6px);
     padding: 1.5rem 0.5rem;
 }
 .meal-name h3{
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 100;
 }
 .recipe-btn{
     text-decoration: none;
@@ -155,17 +157,17 @@ backdrop-filter: blur(17.6px);
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
-   transition: all 0.4s linear;
-   -webkit-border-radius: all 0.4s linear;
-   -moz-border-radius: all 0.4s linear;
-   -ms-border-radius: all 0.4s linear;
-   -o-border-radius: all 0.4s linear;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 .recipe-btn:hover{
     background: var(--tausta-mustempi);
 }
 
-/*Meal details*/
+/* meal details */
 .meal-details{
     position: fixed;
     top: 50%;
@@ -205,10 +207,10 @@ backdrop-filter: blur(17.6px);
     display: block;
 }
 
-.meals-details-content{
+.meal-details-content{
     margin: 2rem;
 }
-.meals-details-content p:not(recipe-category){
+.meal-details-content p:not(.recipe-category){
     padding: 1rem 0;
 }
 .recipe-close-btn{
@@ -231,20 +233,11 @@ backdrop-filter: blur(17.6px);
     opacity: 0.9;
 }
 .recipe-title{
+    font-family: 'Lobster Two', cursive;
+    font-weight: 100;
+    font-size: 2rem;
     letter-spacing: 1px;
     padding-bottom: 1rem;
-}
-.recipe-category{
-    background: #fff;
-    font-weight: 600;
-    color: var(--tausta-musta);
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
 }
 .recipe-category{
     background: #fff;
@@ -285,6 +278,10 @@ backdrop-filter: blur(17.6px);
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
 }
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+
 
 /* */
 .notFound{
@@ -313,13 +310,12 @@ backdrop-filter: blur(17.6px);
         margin: 0;
     }
     .meal-details{
-        width: 700px;
+        width: 900px;
     }
 }
 
 @media screen and (min-width: 992px){
     #meal{
         grid-template-columns: repeat(3, 1fr);
-    }
-    
+    }  
 }
