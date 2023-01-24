@@ -9,20 +9,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 :root{
-    --tausta-musta: #414345;
-    --tausta-mustempi: #232526;
-    --tausta-tumma: #060614;
-    --tausta-lila: #834591;
-    --tausta-pinkki: #98387a;
-    --tausta-sininen: #564f83;
+    --grey: #414345;
+    --dark-grey: #232526;
+    --black: #060614;
+    --purple: #834591;
+    --blue: #564f83;
 }
+
 body{
-    background-color: var(--tausta-tumma);
+    background-color: var(--black);
     background-image: radial-gradient(
-    var(--tausta-tumma),
-    var(--tausta-sininen),
-    var(--tausta-lila)
+    var(--black),
+    var(--blue),
+    var(--purple)
 );
     min-height: 100vh;
     background-size: 300% 300%;
@@ -44,71 +45,88 @@ body{
     }
 }
 
-/*  */
+/* Header */
 .btn{
     font-family: inherit;
     cursor: pointer;
     outline: 0;
     font-size: 1.05rem;
 }
+
 .text{
     opacity: 0.8;
 }
+
 .title{
     font-family: 'Rubik', sans-serif;
     font-weight: 600;
     font-size: 5rem;
     margin-bottom: 1rem;
-}
-.sitaatti{
-    font-family: 'Lobster Two', cursive;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.1;
 }
 
-/*  */
+.quote{
+    font-family: 'Lobster Two', cursive;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+/* Meal Search */
 .container{
     min-height: 100vh;
 }
+
 .meal-wrapper{
     max-width: 1600px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
 }
+
 .meal-search{
     margin: 2rem 0;
 }
+
 .meal-search cite{
     font-size: 1rem;
 }
+
 .meal-search-box{
     margin: 1.2rem 0;
     display: flex;
     align-items: stretch;
+    justify-content: center;
 }
-.search-control,
-.search-btn{
-    width: 100%;
+
+.search-control, .search-btn{
+    width: 50%;
 }
+
 .search-control{
     padding: 0 1rem;
     font-size: 1.1rem;
     font-family: inherit;
     outline: 0;
-    border: 1px solid var(--tausta-musta);
-    color: var(--tausta-musta);
+    border: 1px solid var(--grey);
+    color: var(--grey);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
+
 .search-control::placeholder{
-    color: var(--tausta-musta);
+    color: var(--grey);
 }
+
 .search-btn{
     width: 65px;
     height: 55px;
     font-size: 1.8rem;
-    background: var(--tausta-musta);
+    background: var(--grey);
     color: #fff;
     border: none;
     border-top-right-radius: 2rem;
@@ -119,26 +137,31 @@ body{
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
 }
+
 .search-btn:hover{
-    background: var(--tausta-mustempi);
+    background: var(--dark-grey);
 }
+
 .meal-result{
     font-family: 'Rubik', sans-serif;
     font-size: 2rem;
     margin-top: 6rem;
+    justify-content: center;
 }
+
 #meal{
     margin: 3rem ;
     margin-left: 5rem;
     margin-right: 5rem;
 }
+
 .meal-item{
     background-color: antiquewhite;
     /* From https://css.glass */
-background: rgba(208, 229, 243, 0.18);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(17.6px);
+    background: rgba(208, 229, 243, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.6px);
 
 -webkit-backdrop-filter: blur(17.6px);
     border-radius: 1rem;
@@ -150,22 +173,26 @@ backdrop-filter: blur(17.6px);
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
     margin: 2rem 0;
 }
+
 .meal-img img{
     width: 100%;
     display: block;
 }
+
 .meal-name{
     padding: 1.5rem 0.5rem;
 }
+
 .meal-name h3{
     font-size: 2rem;
     font-family: 'Lobster Two', cursive;
     font-weight: 100;
 }
+
 .recipe-btn{
     text-decoration: none;
     color: #fff;
-    background: var(--tausta-musta);
+    background: var(--grey);
     font-weight: 500;
     font-size: 1.1rem;
     padding: 0.75rem 0;
@@ -183,11 +210,12 @@ backdrop-filter: blur(17.6px);
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
 }
+
 .recipe-btn:hover{
-    background: var(--tausta-mustempi);
+    background: var(--dark-grey);
 }
 
-/* meal details */
+/* Meal Details */
 .meal-details{
     position: fixed;
     top: 50%;
@@ -198,7 +226,7 @@ backdrop-filter: blur(17.6px);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     color: #fff;
-    background: var(--tausta-mustempi);
+    background: var(--dark-grey);
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
@@ -210,9 +238,11 @@ backdrop-filter: blur(17.6px);
     display: none;
     padding: 2rem 0;
 }
+
 .meal-details::-webkit-scrollbar{
     width: 15px;
 }
+
 .meal-details::-webkit-scrollbar-thumb{
     background: #f0f0f0;
     border-radius: 2rem;
@@ -230,9 +260,11 @@ backdrop-filter: blur(17.6px);
 .meal-details-content{
     margin: 2rem;
 }
+
 .meal-details-content p:not(.recipe-category){
     padding: 1rem 0;
 }
+
 .recipe-close-btn{
     position: absolute;
     right: 2rem;
@@ -252,6 +284,7 @@ backdrop-filter: blur(17.6px);
     justify-content: center;
     opacity: 0.9;
 }
+
 .recipe-title{
     font-family: 'Lobster Two', cursive;
     font-weight: 100;
@@ -259,10 +292,11 @@ backdrop-filter: blur(17.6px);
     letter-spacing: 1px;
     padding-bottom: 1rem;
 }
+
 .recipe-category{
     background: #fff;
     font-weight: 600;
-    color: var(--tausta-musta);
+    color: var(--grey);
     display: inline-block;
     padding: 0.2rem 0.5rem;
     border-radius: 0.3rem;
@@ -271,9 +305,11 @@ backdrop-filter: blur(17.6px);
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
 }
+
 .recipe-instruct{
     padding: 1rem 0;
 }
+
 .recipe-meal-img img{
     width: 100px;
     height: 100px;
@@ -285,9 +321,11 @@ backdrop-filter: blur(17.6px);
     margin: 0 auto;
     display: block;
 }
+
 .recipe-link{
     margin: 1.4rem 0;
 }
+
 .recipe-link a{
     color: #fff;
     font-size: 1.2rem;
@@ -298,12 +336,12 @@ backdrop-filter: blur(17.6px);
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
 }
+
 .recipe-link a:hover{
     opacity: 0.8;
 }
 
-
-/* */
+/* Not Found */
 .notFound{
     grid-template-columns: 0.9fr!important;
     color: #fff;
@@ -312,7 +350,7 @@ backdrop-filter: blur(17.6px);
     width: 100%;
 }
 
-/* Media queries */
+/* Media Queries */
 @media screen and (min-width: 600px){
     .meal.meal-search-box{
         width: 540px;
@@ -320,6 +358,7 @@ backdrop-filter: blur(17.6px);
         margin-right: auto;
     }
 }
+
 @media screen and (min-width: 768px){
     #meal{
         display: grid;
